@@ -88,7 +88,7 @@
                         01:05 PM
                     </div>
                 </div>
-                <div class="between-header-bg animate__animated animate__bounceInUp animate__delay-3s animate__slower title-invite">
+                <div class="between-header-bg animate__animated animate__bounceInUp animate__delay-3s animate__slower title-invite blink-text">
                     Mở thư
                 </div>
 
@@ -379,6 +379,16 @@
         audio.play().catch(error => {
             console.error("Không thể phát nhạc tự động:", error);
         });
+
+          $('#main').removeClass('hidden');
+        $('#main').addClass('animate__fadeInUp main-position');
+        $('#header').addClass('animate__fadeOutUp');
+        $(window).on('load scroll', function(){
+            if ($(window).scrollTop() > 900) {
+                $('.fixed').removeClass('hidden');
+            }
+        })
+        
     }, { once: true }); // Sự kiện này chỉ kích hoạt một lần
 </script>
 
