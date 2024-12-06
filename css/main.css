@@ -726,3 +726,20 @@ lottie-player {
 .snowflake:nth-of-type(11){
     left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
 }
+
+.blink-text {
+    font-size: 36px;
+    color: #6B4226;
+    text-align: center;
+    animation: blink 1s;
+    text-shadow: 0 0 5px #86b7fe, 0 0 10px #0dcaf0, 0 0 20px #3F51B5;
+}
+
+@keyframes blink {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Phóng to nhẹ thay vì đổi opacity */
+    }
+}
